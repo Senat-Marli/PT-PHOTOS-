@@ -1,5 +1,3 @@
-// PT Photos — Minimal Scripts
-
 document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile nav
