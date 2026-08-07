@@ -192,7 +192,7 @@ p {
     position: relative;
     z-index: 2;
     max-width: 640px;
-    padding: 0 24px 160px;
+    padding: 0 24px 50px;
 }
 
 .hero-photo-frame {
