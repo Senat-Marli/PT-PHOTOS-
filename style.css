@@ -157,12 +157,12 @@ p {
     transition: var(--transition);
 }
 
-/* Hero */
+/* Hero — content at the bottom */
 .hero {
     position: relative;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     text-align: center;
     overflow: hidden;
@@ -192,13 +192,13 @@ p {
     position: relative;
     z-index: 2;
     max-width: 640px;
-    padding: 100px 24px 60px;
+    padding: 0 24px 80px;
 }
 
 .hero-photo-frame {
     width: 120px;
     height: 120px;
-    margin: 0 auto 28px;
+    margin: 0 auto 24px;
     border: 2px solid rgba(255,255,255,0.3);
     padding: 6px;
 }
