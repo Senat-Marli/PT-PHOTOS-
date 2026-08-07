@@ -227,10 +227,10 @@ p {
     max-width: 700px;
 }
 .about-photo {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     margin-bottom: 32px;
-    border: 2px solid rgba(255,255,255,0.25);
+    border: 2px solid rgba(255,255,255,0.3);
     padding: 6px;
 }
 
@@ -240,6 +240,7 @@ p {
     object-fit: cover;
     display: block;
 }
+
 
 .about-text p {
     line-height: 1.75;
