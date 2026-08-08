@@ -223,11 +223,13 @@ p {
 }
 
 .about-photo {
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     margin-bottom: 32px;
     border: 2px solid rgba(255,255,255,0.25);
     padding: 6px;
+    cursor: pointer;
+    transition: all 0.4s ease;
 }
 
 .about-photo img {
@@ -236,6 +238,31 @@ p {
     object-fit: cover;
     display: block;
 }
+
+.about-photo.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vmin;
+    height: 80vmin;
+    max-width: 600px;
+    max-height: 600px;
+    z-index: 9999;
+    margin: 0;
+    background: rgba(0,0,0,0.9);
+    border: 2px solid rgba(255,255,255,0.3);
+    padding: 10px;
+}
+
+.about-photo.expanded::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: -1;
+}
+
 
 
 .about-text {
