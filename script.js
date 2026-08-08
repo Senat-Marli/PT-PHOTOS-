@@ -50,5 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
         }, 2500);
     });
+    // Click to enlarge Paul photo
+    const aboutPhoto = document.getElementById('aboutPhoto');
+    if (aboutPhoto) {
+        aboutPhoto.addEventListener('click', () => {
+            aboutPhoto.classList.toggle('expanded');
+        });
+    }
 
 });
