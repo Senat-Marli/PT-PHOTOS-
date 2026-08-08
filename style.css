@@ -157,7 +157,7 @@ p {
     transition: var(--transition);
 }
 
-/* Hero — content at the bottom */
+/* Hero */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -192,10 +192,9 @@ p {
     position: relative;
     z-index: 2;
     max-width: 640px;
-    padding: 0 24px 50px;
+    width: 100%;
+    padding: 0 24px 40px;
 }
-
-
 
 .hero-label {
     font-size: 0.65rem;
@@ -223,15 +222,11 @@ p {
     border-top: 1px solid var(--border);
 }
 
-
-.about-text {
-    max-width: 700px;
-}
 .about-photo {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 32px;
-    border: 2px solid rgba(255,255,255,0.3);
+    border: 2px solid rgba(255,255,255,0.25);
     padding: 6px;
 }
 
@@ -242,6 +237,9 @@ p {
     display: block;
 }
 
+.about-text {
+    max-width: 700px;
+}
 
 .about-text p {
     line-height: 1.75;
@@ -279,9 +277,62 @@ p {
     border-color: var(--text-muted);
 }
 
+/* Portfolio — Horizontal Scroll */
+.portfolio {
+    padding: 80px 0;
+    border-top: 1px solid var(--border);
+}
+
+.portfolio h2 {
+    text-align: center;
+}
+
+.portfolio-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 24px 10px;
+    scrollbar-width: none;
+}
+
+.portfolio-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.portfolio-item {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 380px;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.portfolio-item:hover img {
+    opacity: 0.7;
+}
+
+.portfolio-hint {
+    text-align: center;
+    margin-top: 16px;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
 /* Packages */
 .packages {
-    padding: 100px 0;
+    padding: 80px 0;
     border-top: 1px solid var(--border);
 }
 
@@ -359,76 +410,24 @@ p {
     border-radius: 50%;
 }
 
-/* Portfolio — Horizontal Scroll */
-.portfolio {
-    padding: 100px 0;
-    border-top: 1px solid var(--border);
-}
-
-.portfolio h2 {
-    text-align: center;
-}
-
-.portfolio-scroll {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 24px 10px;
-    scrollbar-width: none;
-}
-
-.portfolio-scroll::-webkit-scrollbar {
-    display: none;
-}
-
-.portfolio-item {
-    flex: 0 0 auto;
-    width: 300px;
-    height: 380px;
-    scroll-snap-align: start;
-    overflow: hidden;
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.portfolio-item:hover img {
-    opacity: 0.7;
-}
-
-.portfolio-hint {
-    text-align: center;
-    margin-top: 16px;
-    color: var(--text-muted);
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-}
-
-/* Contact */
+/* Contact — form first, info second */
 .contact {
-    padding: 100px 0;
+    padding: 80px 0;
     border-top: 1px solid var(--border);
+}
+
+.contact h2 {
+    text-align: center;
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: 60px;
+    align-items: start;
 }
 
-.contact-info h2 {
-    margin-bottom: 12px;
-}
-
-.contact-info > p {
+.contact-info p {
     margin-bottom: 28px;
     max-width: 340px;
 }
@@ -611,13 +610,16 @@ p {
     .form-row {
         grid-template-columns: 1fr;
     }
-    .hero-photo-frame {
-        width: 100px;
-        height: 100px;
+    .hero-content {
+        padding-bottom: 40px;
     }
     .portfolio-item {
         width: 220px;
         height: 280px;
+    }
+    .about-photo {
+        width: 160px;
+        height: 160px;
     }
 }
 
