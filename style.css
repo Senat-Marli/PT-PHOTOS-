@@ -662,3 +662,179 @@ p {
         gap: 4px;
     }
 }
+/* =========================================================
+   DESKTOP ONLY — всё ниже активно только на экранах > 900px
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+    /* ─── HERO: текст слева, драматичнее ─── */
+    .hero {
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .hero-bg img {
+        opacity: 0.45;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            to right,
+            rgba(0,0,0,0.92) 0%,
+            rgba(0,0,0,0.6) 45%,
+            rgba(0,0,0,0.2) 100%
+        );
+    }
+
+    .hero-content {
+        max-width: 620px;
+        padding: 0 0 0 8vw;
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.2rem, 5.5vw, 5rem);
+        line-height: 1.05;
+        margin-bottom: 24px;
+    }
+
+    .hero-desc {
+        margin: 0 0 32px 0;
+        font-size: 1.05rem;
+        max-width: 460px;
+    }
+
+    .hero-label {
+        font-size: 0.7rem;
+        margin-bottom: 20px;
+    }
+
+    /* ─── ABOUT: фото слева, текст справа ─── */
+    .about {
+        padding: 100px 0;
+    }
+
+    .about .container {
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        gap: 64px;
+        align-items: start;
+    }
+
+    .about h2 {
+        grid-column: 1 / -1;
+        margin-bottom: 8px;
+    }
+
+    .about-photo {
+        width: 100%;
+        height: 460px;
+        margin-bottom: 0;
+        position: sticky;
+        top: 100px;
+    }
+
+    .about-text {
+        padding-top: 8px;
+    }
+
+    /* ─── PORTFOLIO: сетка вместо скролла ─── */
+    .portfolio {
+        padding: 100px 0;
+    }
+
+    .portfolio-scroll {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+        overflow-x: visible;
+        padding: 0;
+        scroll-snap-type: none;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        height: 380px;
+        scroll-snap-align: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .portfolio-item img {
+        transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                    opacity 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+        transform: scale(1.08);
+        opacity: 0.85;
+    }
+
+    .portfolio-hint {
+        display: none;
+    }
+
+    /* ─── PACKAGES: 4 колонки + hover-эффект ─── */
+    .packages {
+        padding: 100px 0;
+    }
+
+    .packages-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .package-card {
+        transition: transform 0.35s ease,
+                    border-color 0.35s ease,
+                    box-shadow 0.35s ease;
+    }
+
+    .package-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(255,255,255,0.3);
+        box-shadow: 0 24px 50px rgba(0,0,0,0.5);
+    }
+
+    .package-price {
+        font-size: 1.7rem;
+    }
+
+    /* ─── CONTACT: больше воздуха ─── */
+    .contact {
+        padding: 100px 0;
+    }
+
+    .contact-grid {
+        gap: 80px;
+    }
+
+    /* ─── ОБЩАЯ ТИПОГРАФИКА ─── */
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 48px;
+    }
+
+    section {
+        border-top: 1px solid var(--border);
+    }
+}
+
+/* ─── ОЧЕНЬ ШИРОКИЕ ЭКРАНЫ: портфолио крупнее ─── */
+@media (min-width: 1400px) {
+    .portfolio-item {
+        height: 460px;
+    }
+
+    .about .container {
+        grid-template-columns: 420px 1fr;
+        gap: 80px;
+    }
+
+    .hero-content {
+        padding-left: 10vw;
+    }
+}
+
