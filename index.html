@@ -178,7 +178,8 @@
                         <option>Not sure yet</option>
                     </select>
                                         <label class="form-label">Date</label>
-                    <input type="date" name="date" id="weddingDate">
+                                        <input type="date" name="date" id="weddingDate">
+                     <script>document.getElementById('weddingDate').min = new Date().toISOString().split('T')[0];</script>
                     <textarea name="message" rows="4" placeholder="Tell me about your wedding plans" required></textarea>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
