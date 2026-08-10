@@ -137,10 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    /* ─── Contact form ─── */
+       /* ─── Contact form ─── */
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
             // Проверка даты перед отправкой
@@ -154,18 +154,41 @@ document.addEventListener('DOMContentLoaded', function() {
             const btn = contactForm.querySelector('.btn');
             const original = btn.textContent;
 
-            btn.textContent = 'Sent!';
-            btn.style.background = '#333';
+            btn.textContent = 'Sending...';
             btn.disabled = true;
 
-            setTimeout(() => {
-                btn.textContent = original;
-                btn.style.background = '';
-                btn.disabled = false;
-                contactForm.reset();
-            }, 2500);
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                const result = await response.json();
+
+                if (result.success) {
+                    btn.textContent = 'Sent!';
+                    btn.style.background = '#333';
+                    setTimeout(() => {
+                        btn.textContent = original;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                        contactForm.reset();
+                    }, 2500);
+                } else {
+                    throw new Error(result.message);
+                }
+            } catch (err) {
+                btn.textContent = 'Error. Try again.';
+                btn.style.background = '#ff4444';
+                setTimeout(() => {
+                    btn.textContent = original;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            }
         });
     }
+
 
     /* ─── Scroll reveal ─── */
     const revealElements = document.querySelectorAll('.about, .portfolio, .packages, .contact');
