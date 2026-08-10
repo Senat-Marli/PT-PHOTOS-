@@ -27,6 +27,14 @@ document.addEventListener('DOMContentLoaded', function() {
         aboutToggle.textContent = isOpen ? 'Read less' : 'Read more';
     });
 
+    // Click to enlarge Paul photo
+    const aboutPhoto = document.getElementById('aboutPhoto');
+    if (aboutPhoto) {
+        aboutPhoto.addEventListener('click', () => {
+            aboutPhoto.classList.toggle('expanded');
+        });
+    }
+
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -50,14 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
         }, 2500);
     });
-    // Click to enlarge Paul photo
-    const aboutPhoto = document.getElementById('aboutPhoto');
-    if (aboutPhoto) {
-        aboutPhoto.addEventListener('click', () => {
-            aboutPhoto.classList.toggle('expanded');
-        });
-    }
-    // Block past dates in calendar
+
+    // Block past dates
     const weddingDate = document.getElementById('weddingDate');
     if (weddingDate) {
         const today = new Date().toISOString().split('T')[0];
