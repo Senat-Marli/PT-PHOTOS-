@@ -57,5 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
             aboutPhoto.classList.toggle('expanded');
         });
     }
+    // Block past dates in calendar
+    const weddingDate = document.getElementById('weddingDate');
+    if (weddingDate) {
+        const today = new Date().toISOString().split('T')[0];
+        weddingDate.setAttribute('min', today);
+    }
 
 });
