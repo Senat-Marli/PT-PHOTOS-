@@ -164,7 +164,12 @@
         <div class="container">
             <h2>Contact</h2>
             <div class="contact-grid">
-                <form class="contact-form" id="contactForm">
+                                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="52585ecf-d9ac-4b30-9e5b-4c2871a77b1e">
+                    <input type="hidden" name="subject" value="New Wedding Inquiry - PT Photos">
+                    <input type="hidden" name="from_name" value="PT Photos Website">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                     <div class="form-row">
                         <input type="text" name="name" placeholder="Name" required>
                         <input type="email" name="email" placeholder="Email" required>
@@ -177,8 +182,8 @@
                         <option>Legacy Experience</option>
                         <option>Not sure yet</option>
                     </select>
-                                        <label class="form-label">Date</label>
-                                        <input type="date" name="date" id="weddingDate">
+                    <label class="form-label">Date</label>
+                    <input type="date" name="date" id="weddingDate">
                     <textarea name="message" rows="4" placeholder="Tell me about your wedding plans" required></textarea>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
