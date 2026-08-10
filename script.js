@@ -89,11 +89,68 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    /* ─── Date validation: block past dates ─── */
+    const weddingDate = document.getElementById('weddingDate');
+    let todayDate;
+
+    function setMinDate() {
+        if (!weddingDate) return;
+        const now = new Date();
+        now.setHours(0, 0, 0, 0);
+        todayDate = now;
+        const yyyy = now.getFullYear();
+        const mm = String(now.getMonth() + 1).padStart(2, '0');
+        const dd = String(now.getDate()).padStart(2, '0');
+        weddingDate.setAttribute('min', `${yyyy}-${mm}-${dd}`);
+    }
+    setMinDate();
+
+    function isPastDate(dateString) {
+        if (!dateString) return false;
+        const selected = new Date(dateString + 'T00:00:00');
+        return selected < todayDate;
+    }
+
+    function shakeInput(input) {
+        input.style.borderColor = '#ff4444';
+        input.style.transition = 'border-color 0.3s ease';
+        setTimeout(() => {
+            input.style.borderColor = '';
+        }, 1500);
+    }
+
+    if (weddingDate) {
+        // При ручном вводе или выборе
+        weddingDate.addEventListener('change', function() {
+            if (isPastDate(this.value)) {
+                this.value = '';
+                shakeInput(this);
+            }
+        });
+
+        // Защита от копипасты и автозаполнения
+        weddingDate.addEventListener('input', function() {
+            if (isPastDate(this.value)) {
+                this.value = '';
+                shakeInput(this);
+            }
+        });
+    }
+
     /* ─── Contact form ─── */
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
+
+            // Проверка даты перед отправкой
+            if (weddingDate && isPastDate(weddingDate.value)) {
+                weddingDate.value = '';
+                shakeInput(weddingDate);
+                weddingDate.focus();
+                return;
+            }
+
             const btn = contactForm.querySelector('.btn');
             const original = btn.textContent;
 
@@ -108,13 +165,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 contactForm.reset();
             }, 2500);
         });
-    }
-
-    /* ─── Block past dates (единственное место) ─── */
-    const weddingDate = document.getElementById('weddingDate');
-    if (weddingDate) {
-        const today = new Date().toISOString().split('T')[0];
-        weddingDate.setAttribute('min', today);
     }
 
     /* ─── Scroll reveal ─── */
