@@ -437,6 +437,81 @@ p {
     background: var(--text);
     border-radius: 50%;
 }
+/* Image Editing */
+.editing {
+    padding: 80px 0;
+    border-top: 1px solid var(--border);
+}
+
+.editing h2 {
+    text-align: center;
+}
+
+.editing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.editing-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 32px 28px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.editing-card:hover {
+    border-color: rgba(255,255,255,0.25);
+}
+
+.editing-card.popular {
+    border-color: rgba(255,255,255,0.25);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 4px 12px;
+    white-space: nowrap;
+}
+
+.editing-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.editing-meta {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.editing-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.02em;
+}
+
+.editing-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
 
 /* Contact — form first, info second */
 .contact {
