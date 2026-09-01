@@ -3,232 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT Photos | Las Vegas Wedding Photography</title>
-    <meta name="description" content="Las Vegas wedding photography by Paul at PT Photos. Chapel, Signature, Premier, and Legacy packages.">
-    <link rel="stylesheet" href="style.css">
+    <title>PT Photos | Las Vegas Wedding & Portrait Photography</title>
+    <meta name="description" content="Las Vegas wedding photography by Paul at PT Photos. Perfectly timed photos for weddings and senior portraits.">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">PT PHOTOS</a>
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        <path d="M12 6v2M12 16v2M6 12h2M16 12h2"/>
+                    </svg>
+                </div>
+                PT Photos
+            </a>
             <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#packages">Packages</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="weddings.html">Weddings</a></li>
+                <li><a href="seniors.html">Seniors</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
+    <!-- Hero: Weddings -->
     <section class="hero" id="home">
         <div class="hero-bg">
-            <img src="photo1.JPG" alt="Wedding photography">
+            <img src="photo1.JPG" alt="Las Vegas Wedding Photography">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-label">Las Vegas Wedding Photography</p>
-            <h1>Perfectly Timed<br>Photos</h1>
-            <p class="hero-desc">Capturing authentic moments at the Little White Wedding Chapel and beyond.</p>
-            <a href="#portfolio" class="btn">View Portfolio</a>
+            <p class="hero-label">Weddings</p>
+            <h1>Las Vegas Wedding Photography</h1>
+            <p class="hero-desc">From the Little White Wedding Chapel to Downtown Fremont — authentic moments, perfectly timed.</p>
+            <a href="weddings.html" class="btn btn-primary">See Wedding Packages →</a>
         </div>
     </section>
 
-    <section class="about" id="about">
-        <div class="container">
-            <h2>About Paul</h2>
-            <div class="about-photo">
-                <img src="photo2.JPG" alt="Paul - PT Photos">
-            </div>
-            <div class="about-text">
-                <p>Hi, I'm Paul, the photographer behind PT Photos. My journey into wedding photography began behind the scenes as a photo editor at Chapel of the Flowers before I stepped behind the camera.</p>
-                <div class="about-more" id="aboutMore">
-                    <p>Today, I photograph weddings at the iconic Little White Wedding Chapel, capturing everything from intimate elopements to unforgettable celebrations.</p>
-                    <p>Before weddings, I built my career in graphic design and photographed Las Vegas nightlife and events. That creative background shaped the way I approach every wedding—with an eye for light, composition, and the genuine moments that make every couple's story unique.</p>
-                    <p>PT Photos stands for Perfectly Timed Photos because I believe the best images aren't forced—they happen naturally. My goal is to create a relaxed, enjoyable experience while capturing authentic moments you'll cherish for a lifetime.</p>
-                    <p>Whether you're planning a chapel ceremony, a Downtown Las Vegas adventure, or a full wedding day, I'm here to tell your story through timeless photography.</p>
-                </div>
-                <button class="about-toggle" id="aboutToggle">Read more</button>
-            </div>
+    <!-- Family Portrait Sessions -->
+    <section class="family-sessions">
+        <div class="hero-bg">
+            <img src="photo2.JPG" alt="Family Portrait Sessions">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-label">Family & Portrait</p>
+            <h1>Family Portrait Sessions</h1>
+            <p class="hero-desc">From senior portraits to full family sessions — timeless images of the people who matter most.</p>
+            <a href="seniors.html" class="btn btn-outline">See Family Packages →</a>
         </div>
     </section>
 
-    <section class="portfolio" id="portfolio">
+    <!-- About Paul -->
+    <section class="about-home" id="about">
         <div class="container">
-            <h2>Portfolio</h2>
-        </div>
-        <div class="portfolio-scroll" id="portfolioScroll">
-            <div class="portfolio-item"><img src="photo3.JPG" alt="Portfolio 1"></div>
-            <div class="portfolio-item"><img src="photo4.JPG" alt="Portfolio 2"></div>
-            <div class="portfolio-item"><img src="photo5.JPG" alt="Portfolio 3"></div>
-            <div class="portfolio-item"><img src="photo6.JPG" alt="Portfolio 4"></div>
-            <div class="portfolio-item"><img src="photo7.JPG" alt="Portfolio 5"></div>
-            <div class="portfolio-item"><img src="photo8.JPG" alt="Portfolio 6"></div>
-            <div class="portfolio-item"><img src="photo9.JPG" alt="Portfolio 7"></div>
-            <div class="portfolio-item"><img src="photo10.JPG" alt="Portfolio 8"></div>
-            <div class="portfolio-item"><img src="photo11.JPG" alt="Portfolio 9"></div>
-            <div class="portfolio-item"><img src="photo12.JPG" alt="Portfolio 10"></div>
-        </div>
-        <div class="portfolio-hint">
-            <span>&larr; Scroll to explore &rarr;</span>
-        </div>
-    </section>
-
-    <section class="packages" id="packages">
-        <div class="container">
-            <h2>Wedding Packages</h2>
-            <div class="packages-grid">
-                <div class="package-card">
-                    <h3>Chapel Experience</h3>
-                    <div class="package-meta">
-                        <span class="package-price">$595</span>
-                        <span class="package-time">Up to 1 Hour</span>
-                    </div>
-                    <ul class="package-list">
-                        <li>Ceremony coverage</li>
-                        <li>Family portraits</li>
-                        <li>Couple portraits</li>
-                        <li>Creative portraits around the chapel</li>
-                        <li>Professionally edited high-resolution images</li>
-                        <li>Private online gallery</li>
-                        <li>Print release</li>
-                    </ul>
+            <div class="about-home-grid">
+                <div class="about-home-photos reveal">
+                    <img src="photo3.JPG" alt="Wedding portrait">
+                    <img src="photo4.JPG" alt="Couple portrait">
+                    <img src="photo5.JPG" alt="Chapel wedding">
                 </div>
-                <div class="package-card">
-                    <h3>Signature Experience</h3>
-                    <div class="package-meta">
-                        <span class="package-price">$995</span>
-                        <span class="package-time">Up to 2 Hours</span>
-                    </div>
-                    <ul class="package-list">
-                        <li>Everything in the Chapel Experience</li>
-                        <li>Additional portrait time</li>
-                        <li>Multiple nearby locations (Downtown / Fremont Street)</li>
-                        <li>Larger family group coverage</li>
-                        <li>More creative storytelling images</li>
-                        <li>Professionally edited high-resolution images</li>
-                        <li>Private online gallery</li>
-                        <li>Print release</li>
-                    </ul>
-                </div>
-                <div class="package-card">
-                    <h3>Premier Experience</h3>
-                    <div class="package-meta">
-                        <span class="package-price">$1,495</span>
-                        <span class="package-time">Up to 4 Hours</span>
-                    </div>
-                    <ul class="package-list">
-                        <li>Everything in the Signature Experience</li>
-                        <li>Getting ready coverage</li>
-                        <li>Wedding details</li>
-                        <li>Bridal party portraits</li>
-                        <li>Reception highlights</li>
-                        <li>First dance</li>
-                        <li>Parent dances</li>
-                        <li>Cake cutting</li>
-                        <li>Toasts</li>
-                        <li>Grand entrance (timeline permitting)</li>
-                    </ul>
-                </div>
-                <div class="package-card">
-                    <h3>Legacy Experience</h3>
-                    <div class="package-meta">
-                        <span class="package-price">$2,195</span>
-                        <span class="package-time">Up to 8 Hours</span>
-                    </div>
-                    <ul class="package-list">
-                        <li>Complete wedding day storytelling</li>
-                        <li>Everything in the Premier Experience</li>
-                        <li>Full getting ready coverage</li>
-                        <li>Detail photography (rings, attire, invitations)</li>
-                        <li>First look</li>
-                        <li>Full reception coverage</li>
-                        <li>Open dancing</li>
-                        <li>Bouquet / garter toss</li>
-                        <li>Candid guest moments</li>
-                        <li>Night portraits</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-   
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <div class="contact-grid">
-                                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="52585ecf-d9ac-4b30-9e5b-4c2871a77b1e">
-                    <input type="hidden" name="subject" value="New Wedding Inquiry - PT Photos">
-                    <input type="hidden" name="from_name" value="PT Photos Website">
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Name" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                    </div>
-                    <select name="package" required>
-                        <option value="" disabled selected>Interested Package</option>
-                        <option>Chapel Experience</option>
-                        <option>Signature Experience</option>
-                        <option>Premier Experience</option>
-                        <option>Legacy Experience</option>
-                        <option>Not sure yet</option>
-                    </select>
-                    <label class="form-label">Date</label>
-                    <input type="date" name="date" id="weddingDate">
-                    <textarea name="message" rows="4" placeholder="Tell me about your wedding plans" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-                <div class="contact-info">
-                    <p>Ready to book your wedding photography? I will get back to you within 24 hours.</p>
-                    <div class="contact-detail">
-                        <strong>Location</strong>
-                        <span>Las Vegas, Nevada</span>
-                    </div>
-                                     <div class="contact-detail">
-                        <strong>Phone</strong>
-                        <span>+1 (702) 271-7319</span>
-                    </div>
-                    <div class="contact-social">
-                        <strong>Instagram</strong>
-                        <a href="https://www.instagram.com/ptphotos.vegas?igsh=eGgzc2NoMThvaDN6" target="_blank" rel="noopener">@ptphotos.vegas</a>
-                    </div>
-                    
-                        <a href="https://www.tiktok.com/@perfectly.timed8?_r=1&_t=ZS-99BzgvF9smH" target="_blank" rel="noopener">TikTok</a>
-                    <div class="contact-social">
-                        <strong>Facebook</strong>
-                        <a href="https://www.facebook.com/share/1CvV9tf7gH/?mibextid=wwXIfr" target="_blank" rel="noopener">facebook.com/ptphotos</a>
-                    </div>
-                                        <div class="contact-social">
-                        <strong>TikTok</strong>
-                        <a href="https://www.tiktok.com/@perfectly.timed8?_r=1&_t=ZS-99BzgvF9smH" target="_blank" rel="noopener">@perfectly.timed8</a>
-                    </div>
+                <div class="about-home-text reveal">
+                    <span class="section-label">About Paul</span>
+                    <h2 class="section-title">I've been chasing the right moment my whole life.</h2>
+                    <p>I've been shooting since high school — weddings, portraits, events. The past three years have been almost entirely weddings, including the Little White Wedding Chapel and large-scale corporate events through LV Photos.</p>
+                    <p>Whether it's a chapel ceremony or a family portrait, the goal is always the same — when you look back at these photos years from now, I want you to feel like you're right back in that moment.</p>
+                    <a href="about.html" class="link-arrow">Read Full Story →</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Testimonial -->
+    <section class="testimonial">
+        <div class="container">
+            <div class="testimonial-content reveal">
+                <div class="stars">★★★★★</div>
+                <blockquote>"I booked a photographer through the chapel, and Paul was our guy. I can't even begin to say enough about him. We had so much fun with him, and he kept showing us sneak peeks of the pictures and they blew us away. He is extremely talented and was able to capture our fun, flirty, sexy, Vegas dream photos."</blockquote>
+                <div class="testimonial-author">Amanda Zeilman</div>
+                <div class="testimonial-source">Little White Wedding Chapel · Google Review</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid reveal">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Sessions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5.0</div>
+                    <div class="stat-label">Star Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Years in Las Vegas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="reveal">
+                <h2 class="section-title">Ready to book?</h2>
+                <p>Whether it's your wedding day or senior year — I'd love to tell your story.</p>
+                <div class="cta-buttons">
+                    <a href="weddings.html" class="btn btn-dark">Book a Wedding</a>
+                    <a href="seniors.html" class="btn btn-outline-dark">Book a Senior Session</a>
+                </div>
+                <div class="cta-contact">
+                    <a href="tel:+17022717319">📞 (702) 271-7319</a>
+                    <a href="mailto:sales@ptphotos.com">✉️ sales@ptphotos.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <p class="logo">PT PHOTOS</p>
-                <p>Las Vegas wedding photography.</p>
-                               <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#packages">Packages</a>
-                    <a href="#contact">Contact</a>
-                    <a href="https://www.instagram.com/ptphotos.vegas?igsh=eGgzc2NoMThvaDN6" target="_blank" rel="noopener">Instagram</a>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="color:#fff">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                <path d="M12 6v2M12 16v2M6 12h2M16 12h2"/>
+                            </svg>
+                        </div>
+                        PT Photos
+                    </a>
+                    <p>Perfectly Timed Photos by Paul. Las Vegas wedding and senior portrait photography.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/ptphotos.vegas" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@perfectly.timed8" target="_blank" rel="noopener" aria-label="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.88-2.89 2.89 2.89 0 012.88-2.89c.2 0 .39.02.58.06V9.66a6.37 6.37 0 00-.58-.03A6.34 6.34 0 003 16.04 6.34 6.34 0 009.34 22a6.34 6.34 0 006.34-6.34V9.01a8.16 8.16 0 004.8 1.55V7.11a4.85 4.85 0 01-.89-.42z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/share/1CvV9tf7gH/" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                    </div>
                 </div>
-                <p class="copy">&copy; 2026 PT Photos. All rights reserved.</p>
+                <div>
+                    <div class="footer-title">Navigate</div>
+                    <ul class="footer-links">
+                        <li><a href="weddings.html">Weddings</a></li>
+                        <li><a href="seniors.html">Seniors</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-title">Contact</div>
+                    <div class="footer-contact">
+                        <p>Las Vegas, NV</p>
+                        <p>(702) 271-7319</p>
+                        <p>sales@ptphotos.com</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="contact.html" class="btn btn-outline" style="width:100%">Book a Session</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 PT Photos — Perfectly Timed Photos. All rights reserved. Las Vegas, Nevada</p>
             </div>
         </div>
     </footer>
