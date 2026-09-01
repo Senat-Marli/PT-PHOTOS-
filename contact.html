@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | PT Photos Las Vegas</title>
+    <meta name="description" content="Book your Las Vegas wedding or senior portrait session. Contact PT Photos today.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        <path d="M12 6v2M12 16v2M6 12h2M16 12h2"/>
+                    </svg>
+                </div>
+                PT Photos
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="weddings.html">Weddings</a></li>
+                <li><a href="seniors.html">Seniors</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="contact-page-header">
+        <div class="container">
+            <span class="section-label reveal">Let's Connect</span>
+            <h2 class="section-title reveal" style="font-size:clamp(2rem,5vw,3rem)">Book Your Session</h2>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="contact-section" style="padding-top:0">
+        <div class="container">
+            <div class="contact-page-form reveal">
+                <h3 style="font-family:var(--font-serif);font-size:1.5rem;margin-bottom:8px">Send a Message</h3>
+                <p style="margin-bottom:32px">Fill out the form and Paul will get back to you within 24 hours.</p>
+                
+                <form class="contact-form" data-form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="52585ecf-d9ac-4b30-9e5b-4c2871a77b1e">
+                    <input type="hidden" name="subject" value="New Contact Form - PT Photos">
+                    <input type="hidden" name="from_name" value="PT Photos Website">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+                    <input type="text" name="name" placeholder="Your full name" required>
+                    <input type="email" name="email" placeholder="you@example.com" required>
+                    <input type="tel" name="phone" placeholder="(702) 000-0000">
+                    <select name="session_type" required>
+                        <option value="" disabled selected>Session Type</option>
+                        <option>Wedding</option>
+                        <option>Senior Portrait</option>
+                        <option>Family Session</option>
+                        <option>Other</option>
+                    </select>
+                    <textarea name="message" rows="5" placeholder="Tell Paul about your session — date, location ideas, what you're envisioning..." required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message →</button>
+                </form>
+            </div>
+
+            <div class="contact-details-grid reveal" style="margin-top:64px">
+                <div class="contact-info-item">
+                    <strong>Phone</strong>
+                    <a href="tel:+17022717319">(702) 271-7319</a>
+                </div>
+                <div class="contact-info-item">
+                    <strong>Email</strong>
+                    <a href="mailto:sales@ptphotos.com">sales@ptphotos.com</a>
+                </div>
+                <div class="contact-info-item">
+                    <strong>Location</strong>
+                    <span>Las Vegas, NV<br>Available for travel</span>
+                </div>
+            </div>
+
+            <div class="contact-info-item reveal" style="text-align:center;margin-top:32px">
+                <strong>Response Time</strong>
+                <span>Within 24 hours</span>
+            </div>
+
+            <div class="explore-tags reveal">
+                <a href="seniors.html">Senior Packages</a>
+                <a href="weddings.html">Wedding Packages</a>
+                <a href="about.html">About Paul</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <span class="section-label reveal">Common Questions</span>
+            <h2 class="section-title light reveal">FAQ</h2>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question">How far in advance should I book? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>For weddings, I recommend booking 3-6 months in advance. For senior portraits, 2-4 weeks is usually sufficient.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Where do you shoot in Las Vegas? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>I shoot all over Las Vegas — the Little White Wedding Chapel, Downtown Fremont, the Strip, desert landscapes, urban rooftops, and more.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How long until I get my photos? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Turnaround is typically 2 weeks for fully edited galleries. Senior sessions include a next-day sneak peek with select packages.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you travel outside Las Vegas? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Yes! I'm available for travel. Let's discuss your destination wedding or session.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="color:#fff">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                <path d="M12 6v2M12 16v2M6 12h2M16 12h2"/>
+                            </svg>
+                        </div>
+                        PT Photos
+                    </a>
+                    <p>Perfectly Timed Photos by Paul. Las Vegas wedding and senior portrait photography.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/ptphotos.vegas" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@perfectly.timed8" target="_blank" rel="noopener" aria-label="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.88-2.89 2.89 2.89 0 012.88-2.89c.2 0 .39.02.58.06V9.66a6.37 6.37 0 00-.58-.03A6.34 6.34 0 003 16.04 6.34 6.34 0 009.34 22a6.34 6.34 0 006.34-6.34V9.01a8.16 8.16 0 004.8 1.55V7.11a4.85 4.85 0 01-.89-.42z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/share/1CvV9tf7gH/" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-title">Navigate</div>
+                    <ul class="footer-links">
+                        <li><a href="weddings.html">Weddings</a></li>
+                        <li><a href="seniors.html">Seniors</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-title">Contact</div>
+                    <div class="footer-contact">
+                        <p>Las Vegas, NV</p>
+                        <p>(702) 271-7319</p>
+                        <p>sales@ptphotos.com</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="contact.html" class="btn btn-outline" style="width:100%">Book a Session</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 PT Photos — Perfectly Timed Photos. All rights reserved. Las Vegas, Nevada</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
