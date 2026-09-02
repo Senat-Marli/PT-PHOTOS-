@@ -237,9 +237,10 @@ p {
     display: block;
     width: 24px;
     height: 2px;
-    background: var(--text);
+    background: #fff;
     transition: var(--transition);
 }
+
 
 /* ─── Hero ─── */
 .hero {
