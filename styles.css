@@ -948,15 +948,23 @@ p {
 
 .seniors-gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 12px;
 }
 
 .seniors-gallery img {
     width: 100%;
+    height: 100%;
     aspect-ratio: 1;
     object-fit: cover;
+    border-radius: 8px;
 }
+
+.seniors-gallery img.wide {
+    grid-column: 2 / span 2;
+    aspect-ratio: 2 / 1;
+}
+
 
 /* ─── Process ─── */
 .process-section {
@@ -1141,6 +1149,13 @@ p {
     .form-row { grid-template-columns: 1fr; }
     
     .hero h1 { font-size: 2rem; }
+
+    .seniors-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .seniors-gallery img.wide {
+        grid-column: span 2;
+    }
 }
 
 @media (max-width: 1024px) {
