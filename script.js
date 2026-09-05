@@ -146,10 +146,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-      /* ─── Navbar scroll effect ─── */
+    /* ─── Navbar scroll effect ─── */
     const navbar = document.getElementById('navbar');
     if (navbar) {
-        window.addEventListener('scroll', () => {
+        window.addEventListener('scroll', function() {
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
             } else {
@@ -157,4 +157,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
 
