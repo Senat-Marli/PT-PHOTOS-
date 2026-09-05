@@ -157,5 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+});
+
 
 
