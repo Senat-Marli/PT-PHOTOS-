@@ -1099,8 +1099,7 @@ p {
 }
 
 /* ─── Mobile Menu ─── */
-@media (max-width: 768px)
-        
+@media (max-width: 768px) {
     .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
     .nav-toggle.active span:nth-child(2) { opacity: 0; }
     .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
@@ -1110,6 +1109,8 @@ p {
     .seniors-about-grid {
         grid-template-columns: 1fr;
     }
+    ...
+
     
     .stats-grid,
     .packages-grid,
