@@ -24,30 +24,6 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* === Мобильный фикс: глобально === */
-html, body {
-    overscroll-behavior: none;          /* убирает bounce и pull-to-refresh */
-    -webkit-tap-highlight-color: transparent;
-}
-
-img {
-    user-select: none;                  /* нельзя выделить */
-    -webkit-user-drag: none;            /* нельзя тащить пальцем */
-    touch-action: manipulation;         /* убирает double-tap zoom */
-    pointer-events: none;               /* игнорирует touch на самой картинке */
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-    font-family: var(--font-sans);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    font-size: 15px;
-    -webkit-font-smoothing: antialiased;
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1176,21 +1152,7 @@ p {
     .about-home-photos { grid-template-columns: 1fr; }
     .about-home-photos img { aspect-ratio: 16/9; }
 }
-/* === Мобильный фикс: галереи и интерактив === */
-.portfolio-masonry img,
-.about-home-photos img,
-.seniors-gallery img {
-    touch-action: none;
-    pointer-events: none;
-    user-select: none;
-    -webkit-user-drag: none;
-}
 
-/* Кнопки и ссылки — только tap, без лишних движений */
-.btn, .nav-menu a, .nav-toggle, .link-arrow, .faq-question {
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-}
 
 /* ─── Scroll Reveal ─── */
 .reveal {
