@@ -266,25 +266,35 @@ p {
 .hero {
     position: relative;
     min-height: 100vh;
+    min-height: 100dvh;      /* ← iOS фикс */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
     padding-top: 64px;
+    isolation: isolate;      /* ← новый stacking context */
+    touch-action: pan-y;     /* ← только вертикальный скролл */
 }
+
 
 .hero-bg {
     position: absolute;
     inset: 0;
     z-index: 0;
+    transform: translateZ(0);   /* ← аппаратное ускорение */
+    will-change: transform;     /* ← фикс дергания */
 }
+
 
 .hero-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: translateZ(0);   /* ← iOS фикс */
+    will-change: transform;
 }
+
 /* === Мобильный фикс: фоновые картинки не двигаются при touch === */
 .hero-bg img,
 .family-sessions .hero-bg img,
@@ -349,12 +359,16 @@ p {
 .family-sessions {
     position: relative;
     min-height: 80vh;
+    min-height: 80dvh;       /* ← iOS фикс */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    isolation: isolate;
+    touch-action: pan-y;
 }
+
 
 .family-sessions .hero-bg img {
     opacity: 0.8;
@@ -623,13 +637,17 @@ p {
 .page-header {
     position: relative;
     min-height: 90vh;
+    min-height: 90dvh;       /* ← iOS фикс */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
     padding-top: 64px;
+    isolation: isolate;
+    touch-action: pan-y;
 }
+
 
 .page-header .hero-content {
     max-width: 640px;
@@ -1131,9 +1149,7 @@ p {
     .seniors-about-grid {
         grid-template-columns: 1fr;
     }
-    ...
 
-    
     .stats-grid,
     .packages-grid,
     .process-grid,
