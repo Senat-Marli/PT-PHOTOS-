@@ -289,7 +289,9 @@ p {
     margin-bottom: 20px;
 }
 
-.hero h1 {
+.hero h1,
+.family-sessions h1,
+.page-header h1 {
     font-family: var(--font-serif);
     font-size: clamp(2.2rem, 5vw, 4rem);
     font-weight: 600;
@@ -297,6 +299,7 @@ p {
     margin-bottom: 20px;
     line-height: 1.1;
 }
+
 
 .hero-desc {
     font-size: 1.05rem;
