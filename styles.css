@@ -675,10 +675,8 @@ p {
 
 .packages-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    max-width: 640px;
-    margin: 0 auto;
 }
 
 
@@ -1162,10 +1160,17 @@ p {
     }
 }
 
+@media (max-width: 1024px) {
+    .packages-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+
 @media (max-width: 480px) {
+    .packages-grid { grid-template-columns: 1fr; }
     .about-home-photos { grid-template-columns: 1fr; }
     .about-home-photos img { aspect-ratio: 16/9; }
 }
+
 
 
 
